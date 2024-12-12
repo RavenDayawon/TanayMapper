@@ -1,0 +1,411 @@
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tanay Establishment Mapper</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+
+        <link href="https://db.onlinewebfonts.com/c/bf1ead8093f8b529c7581c1cefa75273?family=Artifakt+Element" rel="stylesheet">
+    </head>
+        
+    <body>
+             
+
+        <header class="main-header">
+            <div class="title-container">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for an establishment...">
+                    <div id="searchResults"></div>
+                </div>                
+                <div class="help-button1" id="toggleHelp1">
+                    ?
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <!-- Toggle Switches -->
+            <ul class="toggle-list">
+				<div class="search-bar2">
+                    <input type="text" id="searchInput2" placeholder="Search for an establishment...">
+                    <div id="searchResults2"></div>
+                </div>  
+                <li class="toggle-item">
+                    <span class="toggle-text">Diner</span>
+                    <div class="toggle-container switch1">
+                        <input type="checkbox" id="toggle1" class="toggle-checkbox">
+                        <label for="toggle1" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">School</span>
+                    <div class="toggle-container switch2">
+                        <input type="checkbox" id="toggle2" class="toggle-checkbox">
+                        <label for="toggle2" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Hospital</span>
+                    <div class="toggle-container switch3">
+                        <input type="checkbox" id="toggle3" class="toggle-checkbox">
+                        <label for="toggle3" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Super Market</span>
+                    <div class="toggle-container switch4">
+                        <input type="checkbox" id="toggle4" class="toggle-checkbox">
+                        <label for="toggle4" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Retail</span>
+                    <div class="toggle-container switch5">
+                        <input type="checkbox" id="toggle5" class="toggle-checkbox">
+                        <label for="toggle5" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Fire Station</span>
+                    <div class="toggle-container switch6">
+                        <input type="checkbox" id="toggle6" class="toggle-checkbox">
+                        <label for="toggle6" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Police Station</span>
+                    <div class="toggle-container switch7">
+                        <input type="checkbox" id="toggle7" class="toggle-checkbox">
+                        <label for="toggle7" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Vet</span>
+                    <div class="toggle-container switch8">
+                        <input type="checkbox" id="toggle8" class="toggle-checkbox">
+                        <label for="toggle8" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Gas Station</span>
+                    <div class="toggle-container switch9">
+                        <input type="checkbox" id="toggle9" class="toggle-checkbox">
+                        <label for="toggle9" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Place of Worship</span>
+                    <div class="toggle-container switch10">
+                        <input type="checkbox" id="toggle10" class="toggle-checkbox">
+                        <label for="toggle10" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Brgy Hall</span>
+                    <div class="toggle-container switch11">
+                        <input type="checkbox" id="toggle11" class="toggle-checkbox">
+                        <label for="toggle11" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Bank</span>
+                    <div class="toggle-container switch12">
+                        <input type="checkbox" id="toggle12" class="toggle-checkbox">
+                        <label for="toggle12" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Tire Repair</span>
+                    <div class="toggle-container switch13">
+                        <input type="checkbox" id="toggle13" class="toggle-checkbox">
+                        <label for="toggle13" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Inn</span>
+                    <div class="toggle-container switch14">
+                        <input type="checkbox" id="toggle14" class="toggle-checkbox">
+                        <label for="toggle14" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <li class="toggle-item">
+                    <span class="toggle-text">Terminal</span>
+                    <div class="toggle-container switch15">
+                        <input type="checkbox" id="toggle15" class="toggle-checkbox">
+                        <label for="toggle15" class="toggle-label">
+                            <span class="toggle-ball"></span>
+                        </label>
+                        <div class="blankblu">
+                            <img src="icon/blankblu.png" alt="Blank Blue">
+                        </div>
+                        <div class="blankyel">
+                            <img src="icon/blankyel.png" alt="Blank Grey">
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more toggle items here -->
+            </ul>   
+        </div>
+
+        <!-- HelpTab sidebar -->
+        <div class="helpTab1" id="helpTab1">
+            <div class="help-content1">
+                <h2>About</h2>
+                <p>Welcome to the Tanay Establishment Mapper! This application is designed to help users explore and locate various establishments in Tanay, Rizal. From diners to schools, we aim to provide you with a map with their locations for easy navigation and discovery.</p>
+
+                <h2>How to Use</h2>
+                <ul class="list-loc1">
+                    <li>Use the toggles to filter categories like diners, schools, and more.</li>
+                    <li>Click on map markers to view details about each establishment.</li>
+                    <li>Zoom and pan around the map to explore the area.</li>
+                </ul>
+
+                <h2>Locations</h2>
+                <ul class="list-loc2">
+                    <li><strong>Diners</strong>
+                        <ul>
+                            <li>Restaurants</li>
+                            <li>Fast Food Joints</li>
+                            <li>Carinderia</li>
+                            <li>Cafes</li>
+                        </ul>
+                    </li>
+                    <li><strong>Schools</strong>
+                        <ul>
+                            <li>Public Schools</li>
+                            <li>Private Schools</li>
+                            <li>Tesda Approved Schools</li>
+                            <li>Driving Schools</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hospitals</strong>
+                        <ul>
+                            <li>General Hospitals</li>
+                            <li>Birthing Centers</li>
+                            <li>Dental Clinics</li>
+                        </ul>
+                    </li>
+                    <li><strong>Supermarket</strong>
+                        <ul>
+                            <li>Marts</li>
+                            <li>Public Markets</li>
+                        </ul>
+                    </li>
+                    <li><strong>Retail</strong>
+                        <ul>
+                            <li>Sari Sari Stores</li>
+                            <li>Convenience Stores</li>
+                            <li>Clothing Stores</li>
+                            <li>Butcher Shop</li>
+                            <li>Flower Shop</li>
+                            <li>Motorcycle Parts Shop</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HelpTab2 sidebar -->
+        <div class="helpTab2" id="helpTab2">
+            <div class="help-content">
+                <h2>About</h2>
+                <p>Welcome to the Tanay Establishment Mapper! This application is designed to help users explore and locate various establishments in Tanay, Rizal. From diners to schools, we aim to provide you with a map with their locations for easy navigation and discovery.</p>
+
+                <h2>How to Use</h2>
+                <ul class="list-loc">
+                    <li>Use the toggles to filter categories like diners, schools, and more.</li>
+                    <li>Click on map markers to view details about each establishment.</li>
+                    <li>Zoom and pan around the map to explore the area.</li>
+                </ul>
+
+                <h2>Locations</h2>
+                <ul class="list-loc">
+                    <li><strong>Diners</strong>
+                        <ul>
+                            <li>Restaurants</li>
+                            <li>Fast Food Joints</li>
+                            <li>Carinderia</li>
+                            <li>Cafes</li>
+                        </ul>
+                    </li>
+                    <li><strong>Schools</strong>
+                        <ul>
+                            <li>Public Schools</li>
+                            <li>Private Schools</li>
+                            <li>Tesda Approved Schools</li>
+                            <li>Driving Schools</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hospitals</strong>
+                        <ul>
+                            <li>General Hospitals</li>
+                            <li>Birthing Centers</li>
+                            <li>Dental Clinics</li>
+                        </ul>
+                    </li>
+                    <li><strong>Supermarket</strong>
+                        <ul>
+                            <li>Marts</li>
+                            <li>Public Markets</li>
+                        </ul>
+                    </li>
+                    <li><strong>Retail</strong>
+                        <ul>
+                            <li>Sari Sari Stores</li>
+                            <li>Convenience Stores</li>
+                            <li>Clothing Stores</li>
+                            <li>Butcher Shop</li>
+                            <li>Flower Shop</li>
+                            <li>Motorcycle Parts Shop</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="map-background">
+            <div class="map-container" id="map">
+                <!-- Map will be rendered here -->
+            </div>
+        </div>  
+
+        
+
+        <footer class="main-footer">
+            <div class="title-container">
+                <div class="help-button2" id="toggleHelp2">
+                    ?
+                </div>
+                <div class="logo-circle">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="menu-button" id="toggleSidebar">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

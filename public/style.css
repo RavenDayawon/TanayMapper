@@ -1,0 +1,742 @@
+/* Header block styles */
+header {
+    background-color: #696a82;
+    height: 90px; /* Height of the header */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensure the header stays on top */
+}
+
+  /* Main header styles */
+.main-header {
+    width: 100%;
+    height: 100px;
+    background-color: #696a82;
+    display: flex;
+    align-items: center; /* Center inner header vertically */
+}
+  
+/* Inner header styles */
+.title-container {
+    width: 100%;
+    height: calc(90px - 20px); /* Adjust height as needed */
+    background-color: #d1cec1;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center all content horizontally */
+    position: relative;
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.search-bar {
+    position: relative;
+    margin: 10px;
+    width: 500px;
+}
+
+.search-bar2, #searchInput2, #searchResults2, .search-result2{
+    display: none;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchResults {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-result {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-result:last-child {
+    border-bottom: none;
+}
+
+.search-result:hover {
+    background-color: #f1f1f1;
+}
+
+/* Logo circle styles */
+.logo-circle {
+    width: 90px; /* Circle size */
+    height: 90px;
+    background-color: #696a82;
+    border-radius: 50%; /* Makes it a perfect circle */
+    margin-left: 20px; /* Add a little bit of space on the left */
+    display: flex;
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+    overflow: hidden; /* Ensures image doesn't overflow circle */
+    position: absolute; /* Position it at the left-most side */
+    left: 0; /* Align to the left */
+}
+
+/* Logo image styles */
+.logo-circle img {
+    width: 90%; /* Ensures the image scales to fit the circle */
+    height: 90%; /* Ensures the image scales to fit the circle */
+    object-fit: cover; /* Makes sure the image fits nicely inside */
+}
+
+/* Logo styles */
+.logo {
+    width: 80%; /* Adjust the size of the logo relative to the circle */
+    height: 80%; /* Maintain aspect ratio */
+}
+
+.help-button1 {
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Center vertically within the parent container */
+    right: 40px; /* Set a 40px margin from the right edge */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: 40px;
+    height: 40px;
+    background-color: #adcafe;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid #696a82;
+}
+
+.help-button1.scaled {
+    transform: translateY(-50%) scale(1.1); /* Maintain vertical centering while scaling */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), /* Stronger shadow */
+                0 8px 24px rgba(0, 0, 0, 0.25); /* Wider shadow */
+} 
+
+/* HelpTab1 styles */
+.helpTab1 {
+    position: fixed;
+    top: 70px;
+    left: 30%; /* Center horizontally */
+    width: 40%; /* Sidebar width */
+    height: calc(100vh - 160px); /* Adjust height */
+    background-color: #696a82; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    transform: translateY(150%); /* Start fully hidden */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    z-index: 999; /* Ensure it stays above other elements */
+    overflow-y: auto;
+}
+
+/* Sidebar visible state */
+.helptab1.visible {
+    transform: translateY(0); /* Slide into view */
+}
+
+/* Help content styling */
+.help-content1 h2 {
+    background-color: #adcafe;
+    color: black;
+    margin: 25px 15px 0px 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.help-content1 p {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 15px;
+    margin: 15px;
+    text-align: justify;
+    background-color: #d1cec1;
+    color: black;
+}
+
+.list-loc1 {
+    font-size: 1rem;
+    color: black;
+    background-color: #d1cec1;
+    list-style-type: square; /* Change bullet points to squares */
+    margin: 15px;
+    padding: 15px 15px 15px 30px;
+}
+
+.list-loc1 li {
+    margin: 2px 10px; /* Add spacing between list items */
+    text-align: justify;
+}
+
+.list-loc1 ul {
+    padding-left: 15px; /* Indent for sub-items */
+    margin-top: 0; /* Remove space above nested list */
+}
+
+.list-loc1 ul li {
+    list-style-type: circle; /* Change sublist bullet points to circles */
+}
+
+.list-loc2 {
+    font-size: 1rem;
+    color: black;
+    background-color: #d1cec1;
+    list-style-type: square; /* Change bullet points to squares */
+    margin: 15px;
+    padding: 15px 15px 15px 30px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next column */
+    gap: 20px; /* Add space between columns */
+    list-style-type: none; /* Remove bullet points */
+}
+
+.list-loc2 li {
+    margin: 2px 30px; /* Add spacing between list items */
+    text-align: justify;
+}
+
+.list-loc2 ul {
+    padding-left: 15px; /* Indent for sub-items */
+    margin-top: 0; /* Remove space above nested list */
+}
+
+.list-loc2 ul li {
+    list-style-type: circle; /* Change sublist bullet points to circles */
+}
+
+.list-loc, .help-content, .help-content.p {
+    display: none;
+}
+
+/* Styling the toggle list */
+.toggle-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.toggle-item {
+    display: flex;
+    justify-content: space-between; /* Align text and toggle slider */
+    align-items: center;
+    margin-bottom: 20px; /* Add spacing between items */
+    padding: 10px 0; /* Optional padding for better spacing */
+}
+
+.toggle-item:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+/* Body styles */
+body {
+    background-color: #e1b496;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: space-between; /* Pushes elements to the top and bottom */
+    position: relative; /* Keeps elements within the bounds of the sidebar */
+    width: 15%; /* Adjust width as needed */
+    top: 110px;
+    height: calc(100vh - 130px); /* Adjust height as needed */
+    background-color: #696a82;
+    color: white;
+    padding: 15px; /* Optional padding for spacing */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
+    overflow-y: auto; /* Ensures scrollable content if necessary */
+    direction: rtl;
+}
+
+.sidebar > * {
+    direction: ltr;
+}
+
+.toggle-container {
+    position: relative;
+    width: 98px;
+    height: 35px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #c8dbfd;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.toggle-ball {
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.toggle-text {
+    color: #adcafe;
+    font-family: 'Artifakt Element', sans-serif;
+    font-weight: bold;
+    font-size: 20;
+    flex: 1; /* Allows the text to occupy the available space */
+    text-align: right; /* Aligns text to the left side */
+    margin-right: 15px; /* Adds space between the text and the toggle */
+}
+
+/* Specific styles for each switch */
+.toggle-container.switch1 .toggle-ball {
+    background-image: url('icon/resblu.png'); /* Icon for switch 1 */
+}
+.toggle-container.switch2 .toggle-ball {
+    background-image: url('icon/schoblu.png'); /* Icon for switch 2 */
+}
+.toggle-container.switch3 .toggle-ball {
+    background-image: url('icon/hosblu.png'); /* Icon for switch 3 */
+}
+.toggle-container.switch4 .toggle-ball {
+    background-image: url('icon/marblu.png'); /* Icon for switch 2 */
+}
+.toggle-container.switch5 .toggle-ball {
+    background-image: url('icon/storblu.png'); /* Icon for switch 3 */
+}
+.toggle-container.switch6 .toggle-ball {
+    background-image: url('icon/fireblu.png'); /* Icon for switch 2 */
+}
+.toggle-container.switch7 .toggle-ball {
+    background-image: url('icon/polblu.png'); /* Icon for switch 3 */
+}
+.toggle-container.switch8 .toggle-ball {
+    background-image: url('icon/vetblu.png'); /* Icon for switch 2 */
+}
+.toggle-container.switch9 .toggle-ball {
+    background-image: url('icon/gasblu.png'); /* Icon for switch 2 */
+}
+.toggle-container.switch10 .toggle-ball {
+    background-image: url('icon/chublu.png'); /* Icon for switch 1 */
+}
+.toggle-container.switch11 .toggle-ball {
+    background-image: url('icon/hallblu.png'); /* Icon for switch 2 */
+}
+.toggle-container.switch12 .toggle-ball {
+    background-image: url('icon/bankblu.png'); /* Icon for switch 3 */
+}
+.toggle-container.switch13 .toggle-ball {
+    background-image: url('icon/vulblu.png'); /* Icon for switch 2 */
+}
+.toggle-container.switch14 .toggle-ball {
+    background-image: url('icon/innblu.png'); /* Icon for switch 3 */
+}
+.toggle-container.switch15 .toggle-ball {
+    background-image: url('icon/terblu.png'); /* Icon for switch 2 */
+}
+
+.blankblu img, .blankyel img {
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+}
+
+.blankblu img {
+    left: 0; /* Aligns to the left edge of the container */
+    opacity: 0; /* Initially hidden */
+    z-index: 0;
+}
+
+.blankyel img {
+    right: 0; /* Aligns to the right edge of the container */
+    opacity: 1; /* Initially visible */
+    z-index: 0;
+}
+
+.toggle-checkbox:checked ~ .blankblu img {
+    opacity: 1; /* Show when checked */
+}
+
+.toggle-checkbox:checked ~ .blankyel img {
+    opacity: 0; /* Hide when checked */
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #4caf50; /* Change to a highlight color */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+    transform: translate(66px, -50%);
+}
+
+.map-background {
+    position: absolute;
+    border-radius: 0px 15px 15px 0px;
+    top: 110px; /* Position it below the header */
+    left: 15%;
+    width: calc(100% - 15.5%);
+    height: calc(100vh - 130px);
+    background-color: #696a82;
+}
+
+.map-container {
+    position: absolute;
+    top: 10px;
+    right: 20px; 
+    bottom: 20px; 
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    width: 99.5%;
+    height: 98%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.leaflet-control-container {
+    z-index: 998; /* Lower than the sidebar */
+}
+
+footer {
+    display: none; /* Footer is hidden */
+}
+
+
+/* Responsive styles for smaller PC monitors */
+@media (max-width: 1200px) {
+    .header-title {
+        font-size: 2.5rem; /* Adjust font size */
+        width: 35%; /* Adjust width */
+    }
+
+    .sidebar {
+        width: 25%;
+    }
+
+    .map-background {
+        left: 25%; /* Position it next to the sidebar */
+        width: calc(100% - 310px); /* Adjust width to fit within viewport, 250px sidebar + 20px margin */
+    }
+
+    .helpTab1 {
+        width: 50%; /* Sidebar width */
+    }
+}
+
+@media (max-width: 992px) {
+    .header-title {
+        font-size: 2rem; /* Further reduce font size */
+        width: 30%; /* Adjust width */
+    }
+
+    .sidebar {
+        width: 30%;
+    }
+
+    .map-background {
+        left: 30%; /* Position it next to the sidebar */
+    }
+
+    .helpTab1 {
+        width: 50%; /* Sidebar width */
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+    /* Hide the title on smaller screens */
+    .header-title, .main-header, .header-box {
+        display: none; /* Completely hide the title */
+    }
+
+    /* Center the logo in the header */
+    .logo-circle {
+        position: static; /* Remove absolute positioning */
+        margin: 0 auto; /* Center the logo horizontally */
+        border: 4px solid #d1cec1; /* Add border */
+    }
+
+    /* Add scale and shadow when scaled */
+    .logo-circle.scaled {
+        transform: scale(1.1); /* Slightly enlarge */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), /* Stronger shadow */
+                    0 8px 24px rgba(0, 0, 0, 0.25); /* Wider shadow */
+    }
+
+    /* Sidebar hidden by default */
+    .sidebar {
+        position: fixed;
+        top: 70px;
+        left: 5%; /* Center horizontally */
+        width: 90%; /* Sidebar width */
+        height: calc(100vh - 160px); /* Adjust height */
+        background-color: #696a82; /* Background color */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        transform: translateX(150%); /* Start fully hidden */
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+        z-index: 999; /* Ensure it stays above other elements */
+    }
+
+    /* Sidebar visible state */
+    .sidebar.visible {
+        transform: translateX(0); /* Slide into view */
+    }
+
+    footer {
+        display: flex; /* Show footer instead */
+        background-color: #696a82; /* Same as header */
+        height: 70px; /* Match header height */
+        width: 100%;
+        position: fixed;
+        bottom: 0; /* Position footer at the bottom */
+        z-index: 999; /* Ensure it stays on top */
+        align-items: center; /* Center contents vertically */
+        justify-content: center; /* Center contents horizontally */
+    }
+    
+    /* Additional styles for footer content */
+    .main-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-container {
+        height: 55px;
+    }
+
+    .main-footer .logo-circle img {
+        width: 90%; /* Logo scaling for mobile */
+        height: 90%;
+        object-fit: cover;
+    }
+
+    .main-footer .header-title {
+        font-size: 1.5rem; /* Adjust title size for mobil   e */
+        color: white;
+    }  
+
+    .helpTab1 {
+        display: none;
+    }
+
+    /* HelpTab styles */
+    .helpTab2 {
+        position: fixed;
+        top: 70px;
+        left: 5%; /* Center horizontally */
+        width: 90%; /* Sidebar width */
+        height: calc(100vh - 160px); /* Adjust height */
+        background-color: #696a82; /* Background color */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        transform: translateX(-150%); /* Start fully hidden */
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+        z-index: 999; /* Ensure it stays above other elements */
+        overflow-y: auto;
+    }
+
+    /* Sidebar visible state */
+    .helptab2.visible {
+        transform: translateX(0); /* Slide into view */
+    }
+
+    .help-button2 {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: #adcafe;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.2s;
+        border: 2px solid #696a82;
+    }
+    
+    .help-button2.scaled {
+        transform: scale(1.1); /* Slightly enlarge */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), /* Stronger shadow */
+                    0 8px 24px rgba(0, 0, 0, 0.25); /* Wider shadow */
+    } 
+
+    .list-loc, .help-content, .help-content.p {
+        display: block;
+    }
+
+    /* Help content styling */
+    .help-content h2 {
+        background-color: #adcafe;
+        color: black;
+        margin: 25px 15px 0px 15px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .help-content p {
+        font-size: 1rem;
+        color: #ffffff;
+        padding: 15px;
+        margin: 15px;
+        text-align: justify;
+        background-color: #d1cec1;
+        color: black;
+    }
+
+    .list-loc {
+        font-size: 1rem;
+        color: black;
+        background-color: #d1cec1;
+        list-style-type: square; /* Change bullet points to squares */
+        margin: 15px;
+        padding: 15px 15px 15px 30px;
+    }
+    
+    .list-loc li {
+        margin: 2px 10px; /* Add spacing between list items */
+        text-align: justify;
+    }
+
+    .list-loc ul {
+        padding-left: 15px; /* Indent for sub-items */
+        margin-top: 0; /* Remove space above nested list */
+    }
+    
+    .list-loc ul li {
+        list-style-type: circle; /* Change sublist bullet points to circles */
+    }
+
+    .menu-button {
+        width: 40px;
+        height: 40px;
+        background-color: #adcafe;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-right: 40px; /* Space between menu button and logo */
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, background-color 0.3s;
+        border: 2px solid #696a82;
+    }
+
+    .menu-button.scaled {
+        transform: scale(1.1); /* Slightly enlarge */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), /* Stronger shadow */
+                    0 8px 24px rgba(0, 0, 0, 0.25); /* Wider shadow */
+    }
+
+    .menu-line {
+        width: 60%;
+        height: 2.5px;
+        background-color: white;
+        margin: 2px 0; /* Space between lines */
+        border-radius: 2px; /* Rounded edges */
+        transition: background-color 0.3s;
+    }
+
+    
+
+    .search-bar2 {
+        position: relative;
+        margin: 10px;
+        width: 95%;
+        display: block;
+    }
+    
+    #searchInput2 {
+        width: 100%;
+        border-radius: 5px;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        display: block;
+    }
+    
+    #searchResults2 {
+        position: absolute;
+        top: 36px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 4px;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1050;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: block;
+        color: black;
+    }
+    
+    .search-result2 {
+        cursor: pointer;
+        display: block;
+    }
+    
+    .search-result2:last-child {
+        border-bottom: none;
+    }
+    
+    .search-result2:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .map-background {
+        top: 10px;
+        left: 0px; /* Position it next to the sidebar */
+        height: calc(100vh - 100px); /* Adjust height to fit within viewport, 110px header + 20px bottom margin */
+        width: calc(100% - 5px); /* Adjust width to fit within viewport, 250px sidebar + 20px margin */
+    }
+
+    #map {
+        width: 98.25%;
+        height: 97.5%;
+    }
+}
