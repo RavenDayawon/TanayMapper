@@ -1,10 +1,10 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use the port provided by Render or fallback to 3000
 
 // MongoDB connection
-const uri = "mongodb+srv://ravendayawon:Elemeow69!MongoDB@tanay-map.yys6n.mongodb.net/?retryWrites=true&w=majority&appName=tanay-map"; // Update if your URI is different
+const uri = process.env.MONGODB_URI || "your-fallback-mongodb-uri-here";
 const client = new MongoClient(uri);
 let db;
 
@@ -13,7 +13,18 @@ client.connect()
         console.log("Connected to MongoDB");
         db = client.db("location");
     })
-    .catch(err => console.error("MongoDB connection error:", err));
+    .catch(err => {
+        console.error("MongoDB connection error:", err);
+        db = null; // Set db to null to avoid further errors
+    });
+
+// Middleware to check MongoDB connection
+app.use((req, res, next) => {
+    if (!db) {
+        return res.status(500).json({ error: "Database not connected" });
+    }
+    next();
+});
 
 // API endpoint to fetch locations
 app.get('/api/locations', async (req, res) => {
