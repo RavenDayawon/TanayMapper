@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000; // Use the port provided by Render or fallback to 3000
 
 // MongoDB connection
-const uri = process.env.MONGODB_URI || "your-fallback-mongodb-uri-here";
+const uri = process.env.MONGODB_URI || "mongodb+srv://ravendayawon:Elemeow69!MongoDB@tanay-map.yys6n.mongodb.net/";
 const client = new MongoClient(uri);
 let db;
 
