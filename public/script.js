@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Tanay, Rizal center and bounds
-    var tanayCenter = [14.498230, 121.285389]; // Approximate center of the defined area
+    // var tanayCenter = [14.498230, 121.285389]; // Approximate center of the defined area
     var minZoomLevel = window.innerWidth <= 768 ? 16 : 17; // Set lower minZoom for mobile devices
 
     var map = L.map('map', {
