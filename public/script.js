@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
         zoom: 18,            // Initial zoom level for a closer view of the area
         maxZoom: 18,         // Max zoom to keep focus on Tanay
         minZoom: minZoomLevel, // Adjust minZoom based on device
-        // maxBounds: [         // Restrict the view to these bounds
-        //     [14.487523, 121.274111],  // Southwest corner of the defined area
-        //     [14.513158, 121.296611]   // Northeast corner of the defined area
-        // ],
+        maxBounds: [         // Restrict the view to these bounds
+            [14.487523, 121.274111],  // Southwest corner of the defined area
+            [14.513158, 121.296611]   // Northeast corner of the defined area
+        ],
         maxBoundsViscosity: 1.0,  // Makes the boundaries hard to cross
         bounceAtZoomLimits: false // Prevents snapping back when hitting the boundary
     });
