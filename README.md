@@ -7,8 +7,6 @@ A project created to help locals and visitors explore Tanay in a visual, user-fr
 
 ## 🌼 **Preview**
 
-## 🌼 **Preview**
-
 <p align="center">
   <img src="Screenshots/MobileHome.png" alt="TanayMapper Home Page Mobile View" width="350">
   <img src="Screenshots/MobileTab.png" alt="TanayMapper Tab Mobile View" width="350">
@@ -29,8 +27,6 @@ A project created to help locals and visitors explore Tanay in a visual, user-fr
 <p align="center">
   <img src="Screenshots/AdminPanel.png" alt="TanayMapper Admin Panel" width="1000">
 </p>
-
-
 
 ---
 
