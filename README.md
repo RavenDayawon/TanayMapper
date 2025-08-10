@@ -15,19 +15,19 @@ A project created to help locals and visitors explore Tanay in a visual, user-fr
 </p>
 
 <p align="center">
-  <img src="Screenshots/No%20Icons.png" alt="TanayMapper Home Page Web View" width="800">
+  <img src="Screenshots/No%20Icons.png" alt="TanayMapper Home Page Web View" width="1000">
 </p>
 
 <p align="center">
-  <img src="Screenshots/Search%20Bar.png" alt="TanayMapper Search Tab Web View" width="800">
+  <img src="Screenshots/Search%20Bar.png" alt="TanayMapper Search Tab Web View" width="1000">
 </p>
 
 <p align="center">
-  <img src="Screenshots/With%20Icons.png" alt="TanayMapper With Icons View" width="800">
+  <img src="Screenshots/With%20Icons.png" alt="TanayMapper With Icons View" width="1000">
 </p>
 
 <p align="center">
-  <img src="Screenshots/AdminPanel.png" alt="TanayMapper Admin Panel" width="800">
+  <img src="Screenshots/AdminPanel.png" alt="TanayMapper Admin Panel" width="1000">
 </p>
 
 
