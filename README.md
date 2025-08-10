@@ -6,12 +6,22 @@ A project created to help locals and visitors explore Tanay in a visual, user-fr
 ---
 
 ## 🌼 **Preview**
-![TanayMapper Home Page Mobile View](Screenshots/MobileHome.png)  
-![TanayMapper Tab Mobile View](Screenshots/MobileTab.png)
-![TanayMapper Home Page Web View](Screenshots/No%20Icons.png)
-![TanayMapper Search Tab Web View](Screenshots/Search%20Bar.png)
-![TanayMapper With Icons View](Screenshots/With%20Icons.png)
-![TanayMapper Admin Panel](Screenshots/AdminPanel.png)
+
+<p align="center">
+  <img src="Screenshots/MobileHome.png" alt="TanayMapper Home Page Mobile View" width="250">
+  <img src="Screenshots/MobileTab.png" alt="TanayMapper Tab Mobile View" width="250">
+</p>
+
+<p align="center">
+  <img src="Screenshots/No%20Icons.png" alt="TanayMapper Home Page Web View" width="400">
+  <img src="Screenshots/Search%20Bar.png" alt="TanayMapper Search Tab Web View" width="400">
+</p>
+
+<p align="center">
+  <img src="Screenshots/With%20Icons.png" alt="TanayMapper With Icons View" width="400">
+  <img src="Screenshots/AdminPanel.png" alt="TanayMapper Admin Panel" width="400">
+</p>
+
 
 ---
 
