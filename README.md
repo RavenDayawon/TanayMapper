@@ -22,12 +22,12 @@ A project created to help locals and visitors explore Tanay in a visual, user-fr
 
 ---
 
-🛠 **Admin Panel** 
-The Admin Panel is a separate Node.js application for TanayMapper, designed for administrators to easily manage the map’s data.
+## 🛠 **Admin Panel**
+The Admin Panel is a separate Node.js application for TanayMapper, designed for administrators to easily manage the map’s data.  
 
-Purpose: Allows admins to quickly add new locations directly into the MongoDB database without manually editing the data.
+**Purpose:** Allows admins to quickly add new locations directly into the MongoDB database without manually editing the data.  
 
-How it works: Runs locally, providing a simple form-based interface where location details can be submitted and stored.
+**How it works:** Runs locally, providing a simple form-based interface where location details can be submitted and stored.  
 
 ---
 
